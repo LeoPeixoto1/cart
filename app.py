@@ -21,6 +21,7 @@ class ItensCarrinho(BaseModel):
     id_carrinho: str
     id_produto: int
 
+@app.get("/")
 def read_root():
     return {"message": "Olá"}
 
