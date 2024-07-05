@@ -21,6 +21,9 @@ class ItensCarrinho(BaseModel):
     id_carrinho: str
     id_produto: int
 
+def read_root():
+    return {"message": "Olá"}
+
 @app.post("/adicionar")
 def adicionar_ao_carrinho(item: ItensCarrinho):
     carrinhos = ler_json('carrinhos.json')
