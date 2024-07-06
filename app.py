@@ -109,6 +109,6 @@ def remover_carrinho(id_carrinho: str):
         }
         
 @app.get("/products")
-def listar_todos_produtos(produtos: str):
+def listar_todos_produtos():
     produtos = ler_json('produtos.json')
     return produtos
