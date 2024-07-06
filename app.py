@@ -25,7 +25,7 @@ class ItensCarrinho(BaseModel):
 def read_root():
     return {"message": "Olá"}
 
-@app.post("/adicionar")
+@app.post("/add-to-cart")
 def adicionar_ao_carrinho(item: ItensCarrinho):
     carrinhos = ler_json('carrinhos.json')
     if item.id_carrinho not in carrinhos['carrinhos']:
@@ -35,11 +35,7 @@ def adicionar_ao_carrinho(item: ItensCarrinho):
     escrever_json('carrinhos.json', carrinhos)
     return {"message": "Produto adicionado ao carrinho"}
 
-from fastapi import HTTPException
-
-from fastapi import HTTPException
-
-@app.get("/carrinho/{id_carrinho}")
+@app.get("/cart/{id_carrinho}")
 def mostrar_carrinho(id_carrinho: str):
     carrinhos = ler_json('carrinhos.json')
     produtos = ler_json('produtos.json')
@@ -81,9 +77,7 @@ def mostrar_carrinho(id_carrinho: str):
     
     return resposta
 
-from fastapi import HTTPException
-
-@app.delete("/carrinho/{id_carrinho}/{id_produto}")
+@app.delete("/cart/{id_carrinho}/{id_produto}")
 def remover_do_carrinho(id_carrinho: str, id_produto: str):
     carrinhos = ler_json('carrinhos.json')
     
@@ -99,7 +93,7 @@ def remover_do_carrinho(id_carrinho: str, id_produto: str):
     else:
         raise HTTPException(status_code=404, detail=f"Produto {id_produto} não encontrado no carrinho {id_carrinho}")
 
-@app.delete("/carrinho/{id_carrinho}")
+@app.delete("/cart/{id_carrinho}")
 def remover_carrinho(id_carrinho: str):
     carrinhos = ler_json('carrinhos.json')
     
@@ -113,3 +107,8 @@ def remover_carrinho(id_carrinho: str):
         return {
             "message": "Carrinho esvaziado"
         }
+        
+@app.get("/products")
+def listar_todos_produtos(produtos: str):
+    produtos = ler_json('produtos.json')
+    return produtos
