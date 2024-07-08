@@ -111,10 +111,12 @@ def remover_carrinho(id_carrinho: str):
         }
         
 @app.get("/products")
-def listar_todos_produtos(categoria: Optional[str] = Query(None, alias="CATEGORIA")):
+def listar_todos_produtos(categoria: Optional[str] = Query(None, alias="CATEGORIA"), id: Optional[str] = Query(None, alias="ID")):
     produtos = ler_json('produtos.json')
+    if id:
+        produto = next((produto for produto in produtos if produto.get('ID') == id), None)
+        return produto if produto else {"message": "Produto não encontrado"}
     if categoria:
         produtos = [produto for produto in produtos if produto.get('CATEGORIA').lower() == categoria.lower()]
     return produtos
-
 
