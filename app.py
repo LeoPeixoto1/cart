@@ -75,7 +75,7 @@ def mostrar_carrinho(id_carrinho: str):
     
     valor_total_formatado = f"R$ {valor_total:.2f}"
     
-    resposta = {"items": detalhe_itens, "valor_total": valor_total_formatado}
+    resposta = {"itens": detalhe_itens, "valor_total": valor_total_formatado}
     
     return resposta
 
