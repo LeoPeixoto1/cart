@@ -114,6 +114,7 @@ def remover_carrinho(id_carrinho: str):
 def listar_todos_produtos(categoria: Optional[str] = Query(None, alias="CATEGORIA")):
     produtos = ler_json('produtos.json')
     if categoria:
-        produtos = [produto for produto in produtos if produto.get('categoria') == categoria]
+        produtos = [produto for produto in produtos if produto.get('CATEGORIA').lower() == categoria.lower()]
     return produtos
+
 
