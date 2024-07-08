@@ -72,7 +72,9 @@ def mostrar_carrinho(id_carrinho: str):
                     "CATEGORIA": produto_encontrado['CATEGORIA'],
                     "DESCRICAO": produto_encontrado['DESCRICAO']
                 })
-    
+        else:
+            raise HTTPException(status_code=404, detail=f"Produto com ID {id_produto} não encontrado no carrinho")
+
     valor_total_formatado = f"R$ {valor_total:.2f}"
     
     resposta = {"itens": detalhe_itens, "valor_total": valor_total_formatado}
