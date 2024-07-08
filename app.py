@@ -1,8 +1,10 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 import json
+from typing import Optional
 
 app = FastAPI()
+
 
 def ler_json(filename):
     try:
@@ -109,6 +111,9 @@ def remover_carrinho(id_carrinho: str):
         }
         
 @app.get("/products")
-def listar_todos_produtos():
+def listar_todos_produtos(categoria: Optional[str] = Query(None, alias="CATEGORIA")):
     produtos = ler_json('produtos.json')
+    if categoria:
+        produtos = [produto for produto in produtos if produto.get('categoria') == categoria]
     return produtos
+
