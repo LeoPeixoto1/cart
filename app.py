@@ -1,9 +1,14 @@
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
-import json
 from typing import Optional
+from pydantic import BaseModel
+import json
+from fatura import router as fatura_router
+
 
 app = FastAPI()
+
+
 
 
 def ler_json(filename):
@@ -18,14 +23,19 @@ def ler_json(filename):
 def escrever_json(filename, data):
     with open(filename, 'w', encoding='utf-8') as file:
         json.dump(data, file, indent=4, ensure_ascii=False)
+        
 
 class ItensCarrinho(BaseModel):
     id_carrinho: str
     id_produto: int
 
+    
+app.include_router(fatura_router)
+
 @app.get("/")
 def read_root():
     return {"message": "Olá"}
+
 
 @app.post("/add-to-cart")
 def adicionar_ao_carrinho(item: ItensCarrinho):
@@ -126,4 +136,4 @@ def listar_todos_produtos(categoria: Optional[str] = Query(None, alias="CATEGORI
     if categoria:
         produtos = [produto for produto in produtos if produto.get('CATEGORIA').lower() == categoria.lower()]
     return produtos
-    
+ 
