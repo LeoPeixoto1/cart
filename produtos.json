@@ -11,7 +11,7 @@
         "ID": "2",
         "PRODUTO": "Iphone 13 256GB",
         "VALOR": "R$ 4.499,00",
-        "IMAGEM_PRODUTO": "12/12/24",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/send/19f9808221e09a92d4d22f6c03bd13d3.png",
         "CATEGORIA": "iphone",
         "DESCRICAO": "Smartphone com tela Super Retina XDR de 6,1 polegadas, processador A15 Bionic e armazenamento de 256GB. Oferece câmeras avançadas para fotos e vídeos de alta qualidade."
     },
@@ -27,7 +27,7 @@
         "ID": "4",
         "PRODUTO": "Iphone 14 128GB",
         "VALOR": "R$ 4.999,00",
-        "IMAGEM_PRODUTO": "",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/receive/f075ae9daa82a9ac5e9b20aa573affdc.jpeg",
         "CATEGORIA": "iphone",
         "DESCRICAO": "Smartphone com tela Super Retina XDR de 6,1 polegadas, processador A16 Bionic e armazenamento de 128GB. Oferece melhorias na câmera e no desempenho em relação ao iPhone 13."
     },
@@ -35,15 +35,15 @@
         "ID": "5",
         "PRODUTO": "Iphone 14 256GB",
         "VALOR": "R$ 5.499,00",
-        "IMAGEM_PRODUTO": "",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/receive/f075ae9daa82a9ac5e9b20aa573affdc.jpeg",
         "CATEGORIA": "iphone",
         "DESCRICAO": "Smartphone com tela Super Retina XDR de 6,1 polegadas, processador A16 Bionic e armazenamento de 256GB. Oferece melhorias na câmera e no desempenho em relação ao iPhone 13."
     },
     {
         "ID": "6",
-        "PRODUTO": "Iphone 14 pro 256GB",
+        "PRODUTO": "Iphone 14 pro max 256GB",
         "VALOR": "R$ 6.999,00",
-        "IMAGEM_PRODUTO": "",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/receive/8578c5280023dc9a0dfccfb64642a552.jpeg",
         "CATEGORIA": "iphone",
         "DESCRICAO": "Versão Pro do iPhone 14, com tela ProMotion de 6,1 polegadas, processador A16 Bionic, câmera tripla profissional e armazenamento de 256GB, projetado para usuários que necessitam de recursos de ponta."
     },
@@ -51,7 +51,7 @@
         "ID": "7",
         "PRODUTO": "Iphone 15 128GB",
         "VALOR": "R$ 5.999,00",
-        "IMAGEM_PRODUTO": "",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/receive/df4d110ae20b4b669a0857dad9530d8f.jpeg",
         "CATEGORIA": "iphone",
         "DESCRICAO": "Smartphone com tela Super Retina XDR de 6,1 polegadas, processador A17 Bionic e armazenamento de 128GB. Introduz novas tecnologias e melhorias de desempenho."
     },
@@ -59,7 +59,7 @@
         "ID": "8",
         "PRODUTO": "Iphone 15 256GB",
         "VALOR": "R$ 6.499,00",
-        "IMAGEM_PRODUTO": "",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/receive/df4d110ae20b4b669a0857dad9530d8f.jpeg",
         "CATEGORIA": "iphone",
         "DESCRICAO": "Smartphone com tela Super Retina XDR de 6,1 polegadas, processador A17 Bionic e armazenamento de 256GB. Introduz novas tecnologias e melhorias de desempenho."
     },
@@ -67,7 +67,7 @@
         "ID": "9",
         "PRODUTO": "Iphone 15 pro 256GB",
         "VALOR": "R$ 7.999,00",
-        "IMAGEM_PRODUTO": "",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/receive/c09af9c27ca3671a1ddc32785c333805.jpeg",
         "CATEGORIA": "iphone",
         "DESCRICAO": "Versão Pro do iPhone 15, com tela ProMotion de 6,1 polegadas, processador A17 Bionic, câmeras avançadas e armazenamento de 256GB. Perfeito para quem busca o máximo em performance e qualidade de imagem."
     },
@@ -75,7 +75,7 @@
         "ID": "10",
         "PRODUTO": "Macbook air m1 256GB",
         "VALOR": "R$ 7.499,00",
-        "IMAGEM_PRODUTO": "",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/receive/6e0d692c47cec27a7f6d4d583319e921.jpeg",
         "CATEGORIA": "macbook",
         "DESCRICAO": "Notebook ultraleve com tela Retina de 13,3 polegadas, processador Apple M1 e armazenamento de 256GB. Oferece excelente desempenho e eficiência energética."
     },
@@ -83,7 +83,7 @@
         "ID": "11",
         "PRODUTO": "Macbook air m2 512GB",
         "VALOR": "R$ 9.999,00",
-        "IMAGEM_PRODUTO": "",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/receive/18d2f77b32f788ae6b6c21e565098439.jpeg",
         "CATEGORIA": "macbook",
         "DESCRICAO": "Atualização do MacBook Air, com tela Retina de 13,6 polegadas, processador Apple M2 e 512GB de armazenamento. Proporciona melhorias significativas em desempenho e capacidade de armazenamento."
     },
@@ -91,7 +91,7 @@
         "ID": "12",
         "PRODUTO": "Macbook pro m1 256GB",
         "VALOR": "R$ 9.999,00",
-        "IMAGEM_PRODUTO": "",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/receive/b5517dbcecebf320ffc62b08c6499358.jpeg",
         "CATEGORIA": "macbook",
         "DESCRICAO": "Notebook de alto desempenho com tela Retina de 13,3 polegadas, processador Apple M1 e 256GB de armazenamento. Ideal para tarefas intensivas e uso profissional."
     },
@@ -99,7 +99,7 @@
         "ID": "13",
         "PRODUTO": "Macbook pro m3 512GB",
         "VALOR": "R$ 15.999,00",
-        "IMAGEM_PRODUTO": "",
+        "IMAGEM_PRODUTO": "https://wetalkie.net/static/account/1/callcenter/attendance/receive/b5517dbcecebf320ffc62b08c6499358.jpeg",
         "CATEGORIA": "macbook",
         "DESCRICAO": "Versão mais recente do MacBook Pro, com tela Retina de 14 polegadas, processador Apple M3 e 512GB de armazenamento. Projetado para profissionais que necessitam de poder de processamento e grande capacidade de armazenamento."
     }
