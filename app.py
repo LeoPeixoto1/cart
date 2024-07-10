@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Path, Query
 from pydantic import BaseModel
 from typing import Optional
 from pydantic import BaseModel
@@ -123,21 +123,21 @@ def remover_carrinho(id_carrinho: str):
             "message": "Carrinho esvaziado"
         }
         
-@app.get("/products")
-def listar_todos_produtos(categoria: Optional[str] = None, 
-                          id: Optional[str] = None,
-                          all: Optional[bool] = None):
+@app.get("/products/{variavel}")
+def listar_produtos(
+    variavel: str = Path(..., description="Categoria, ID ou 'all' para todos os produtos")
+):
     produtos = ler_json('produtos.json')
     
-    if all:
+    if variavel == "all":
         return produtos
     
-    if id:
-        produto = next((produto for produto in produtos if produto.get('ID') == id), None)
-        return produto if produto else {"message": "Produto não encontrado"}
+    produto = next((produto for produto in produtos if produto.get('ID') == variavel), None)
+    if produto:
+        return produto
     
-    if categoria:
-        produtos_filtrados = [produto for produto in produtos if produto.get('CATEGORIA', '').lower() == categoria.lower()]
+    produtos_filtrados = [produto for produto in produtos if produto.get('CATEGORIA', '').lower() == variavel.lower()]
+    if produtos_filtrados:
         return produtos_filtrados
-    #1
-    return produtos
+    
+    return {"message": "Produto não encontrado"}
