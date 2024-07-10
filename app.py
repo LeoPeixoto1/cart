@@ -139,5 +139,5 @@ def listar_todos_produtos(categoria: Optional[str] = None,
     if categoria:
         produtos_filtrados = [produto for produto in produtos if produto.get('CATEGORIA', '').lower() == categoria.lower()]
         return produtos_filtrados
-    
+    #1
     return produtos
