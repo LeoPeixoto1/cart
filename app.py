@@ -107,7 +107,7 @@ def remover_do_carrinho(id_carrinho: str, id_produto: str):
         
         return {"message": "Produto removido do carrinho"}
     else:
-        raise HTTPException(status_code=404, detail=f"Produto {id_produto} não encontrado no carrinho {id_carrinho}")
+        raise HTTPException(status_code=409, detail=f"Seu carrinho já está vazio :(")
 
 @app.delete("/cart/{id_carrinho}")
 def remover_carrinho(id_carrinho: str):
