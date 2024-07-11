@@ -80,6 +80,7 @@ def mostrar_carrinho(id_carrinho: str):
                 detalhe_itens.append({
                     "ID": produto_encontrado['ID'],
                     "PRODUTO": produto_encontrado['PRODUTO'],
+                    "VALOR_SEM_DESCONTO": produto_encontrado['VALOR_SEM_DESCONTO'],
                     "VALOR": produto_encontrado['VALOR'],
                     "IMAGEM_PRODUTO": produto_encontrado['IMAGEM_PRODUTO'],
                     "CATEGORIA": produto_encontrado['CATEGORIA'],
