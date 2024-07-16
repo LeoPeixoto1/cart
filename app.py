@@ -4,6 +4,7 @@ from typing import Optional
 from pydantic import BaseModel
 import json
 from fatura import router as fatura_router
+from pdf import router as pdf_router
 
 
 app = FastAPI()
@@ -31,6 +32,7 @@ class ItensCarrinho(BaseModel):
 
     
 app.include_router(fatura_router)
+app.include_router(pdf_router)
 
 @app.get("/")
 def read_root():

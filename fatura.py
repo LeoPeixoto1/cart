@@ -104,3 +104,4 @@ async def gerar_fatura(invoice_info: InvoiceInfo):
     pdf_data_uri = f"data:application/pdf;base64,{pdf_base64}"
 
     return {"value": "fatura.pdf", "key": pdf_data_uri}
+
