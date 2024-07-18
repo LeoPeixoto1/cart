@@ -41,7 +41,7 @@ def criar_pdf_cliente(client_info: ClientInfo, save_path: str) -> io.BytesIO:
     c.drawString(40, text_y_start - 20, f"Nome: {client_info.nome}")
     c.drawString(40, text_y_start - 50, f"Setor: {client_info.setor}")
     c.drawString(40, text_y_start - 80, f"Quantidade de funcionários: {client_info.funcionarios}")
-    c.drawString(40, text_y_start - 110, f"Endereço: {client_info.endereco}")
+    c.drawString(40, text_y_start - 110, f"Cidade: {client_info.endereco}")
     c.setFont("Helvetica", 10)
     c.drawString(40, text_y_start - 200, "Ao confirmar, você afirma que os dados estão corretos e que podemos dar prosseguimento.")
 
