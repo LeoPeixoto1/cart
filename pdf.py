@@ -14,7 +14,8 @@ router = APIRouter()
 
 class ClientInfo(BaseModel):
     nome: str
-    documento: str
+    setor: str
+    funcionarios: str
     endereco: str
     
     
@@ -31,15 +32,16 @@ def criar_pdf_cliente(client_info: ClientInfo, save_path: str) -> io.BytesIO:
     text_y_start = height - 283.46
 
     c.setFont("Helvetica", 20)
-    c.drawString(257, text_y_start + 105, "Recibo")
+    c.drawString(110, text_y_start + 105, "Documento para confirmação de dados")
     c.setFont("Helvetica", 14)
     c.drawString(40, text_y_start + 65, "Por meio desse documento, você confirma o envio dos seguintes dados:")
     c.setFont("Helvetica-Bold", 18)
     c.drawString(40, text_y_start, "Informações do cliente:")
     c.setFont("Helvetica", 14)
     c.drawString(40, text_y_start - 20, f"Nome: {client_info.nome}")
-    c.drawString(40, text_y_start - 50, f"Documento: {client_info.documento}")
-    c.drawString(40, text_y_start - 80, f"Endereço: {client_info.endereco}")
+    c.drawString(40, text_y_start - 50, f"Setor: {client_info.setor}")
+    c.drawString(40, text_y_start - 80, f"Quantidade de funcionários: {client_info.funcionarios}")
+    c.drawString(40, text_y_start - 110, f"Endereço: {client_info.endereco}")
     c.setFont("Helvetica", 10)
     c.drawString(40, text_y_start - 200, "Ao confirmar, você afirma que os dados estão corretos e que podemos dar prosseguimento.")
 
