@@ -59,11 +59,11 @@ def criar_pdf_cliente(client_info: ClientInfo, save_path: str) -> io.BytesIO:
     
 @router.post("/pdf")
 async def gerar_pdf_cliente(client_info: ClientInfo):
-    pdf_save_path = os.path.join(os.getcwd(), "cliente.pdf")
+    pdf_save_path = os.path.join(os.getcwd(), "coleta-de-dados.pdf")
 
     pdf_buffer = criar_pdf_cliente(client_info, pdf_save_path)
 
     pdf_base64 = base64.b64encode(pdf_buffer.getvalue()).decode('utf-8')
     pdf_data_uri = f"data:application/pdf;base64,{pdf_base64}"
 
-    return {"value": "cliente.pdf", "key": pdf_data_uri}
+    return {"value": "coleta-de-dados.pdf", "key": pdf_data_uri}
